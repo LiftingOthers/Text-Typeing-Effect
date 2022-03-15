@@ -1,0 +1,48 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+  width: 100%;
+  height: 100vh;
+  background: url("images/background.jpg") center center/cover no-repeat;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.flex h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#text {
+  margin-left: 26px;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+  position: relative;
+}
+#text::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: -8px;
+  width: 5px;
+  height: 68%;
+  background-color: black;
+  animation: blink 0.5s infinite ease;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
